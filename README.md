@@ -8,5 +8,7 @@ PDF editor is a Python project that is used to edit PDF files through various wa
 Import the following libraries(pip install first):
 
 PyPDF2
+
 Pillow
+
 tabula-py
