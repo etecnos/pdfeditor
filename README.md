@@ -12,3 +12,7 @@ PyPDF2
 Pillow
 
 tabula-py
+
+
+include 5 images inside the folder to be used by pygame (data/image..png)
+each image have to specify 
