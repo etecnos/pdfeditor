@@ -25,7 +25,7 @@ tabula-py
 !OUTPUT FOLDER DOES NOT HAVE TO BE INSTALLED
 
 
-![monitor](https://github.com/[eTecnos]/[pdfeditor]/blob/[output]/monitor.png?raw=true)
+![monitor](https://github.com/etecnos/pdfeditor/blob/main/output/monitor.png?raw=true)
 
 
 
