@@ -1,9 +1,3 @@
-
-
-
-
-
-
 # connect the main python file with all the secondary files
 from photo import photo
 from split import split
@@ -11,7 +5,6 @@ from merge import merge
 from merge import execute
 from detect import detect, give
 from tables import tables
-
 
 
 # The Libraries we are going to use
