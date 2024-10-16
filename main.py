@@ -112,10 +112,7 @@ while again:
                 else:
                     call_text("Tables are extracted inside tables.txt(directory of the program)",370)
             pygame.display.update()
-            time.sleep(10000)
-            call_text("If you want anything else, wait 5 more seconds, else close the program", 160)
-            pygame.display.update()
-            time.sleep(5000)
+            time.sleep(5)
             running = True
             start = True
             break
@@ -125,6 +122,7 @@ while again:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+                again = False
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and start:  # Left click
                 mouse_pos = pygame.mouse.get_pos()
                 check_image_click(mouse_pos)
