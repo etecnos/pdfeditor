@@ -32,7 +32,7 @@ pygame.display.set_icon(pygame_icon)
 
 # func variable changes according to which action is selected
 func = 0
-# Start variable helps inside the ruuning loop
+# Start variable helps inside the running loop
 start = True
 
 
@@ -78,7 +78,7 @@ def call_text_lines(tx):
 
 
 
-# this function checks wether any of the given iamges is selected(image = action)
+# this function checks whether any of the given images is selected(image = action)
 def check_image_click(pos):
     global clicked_image_index
     for idx, (image, img_pos) in enumerate(zip(images, image_positions)):
