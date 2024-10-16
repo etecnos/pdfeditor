@@ -22,12 +22,23 @@ tabula-py
 
 
 !Data folder conteins images used by pygame inside main.py
-!OUTPUT FOLDER DOES NOT HAVE TO BE INSTALLED
+!OUTPUT FOLDER DOES NOT HAVE TO BE DOWNLOADED
+
+
+
+The following Window will open while running main.py:
+
 
 
 ![monitor](https://github.com/etecnos/pdfeditor/blob/main/output/monitor.png?raw=true)
 
 
+by clicking to an image you can conduct a specific operation 
+
+after finishing an operation you can close the window
+
+
+~eTecnos
 
 
 
