@@ -10,6 +10,8 @@ BY Using PDF editor you will be able to:
 
 
 
+
+
 Import the following libraries(pip install first):
 
 PyPDF2
@@ -20,4 +22,9 @@ tabula-py
 
 
 !Data folder conteins images used by pygame inside main.py
+!OUTPUT FOLDER DOES NOT HAVE TO BE INSTALLED
+
+
+
+
 
