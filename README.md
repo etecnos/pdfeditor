@@ -1,7 +1,12 @@
 # pdfeditor
 PDF editor is a Python project that is used to edit PDF files through various ways, by using graphics (pygame) and various other python libraries to access the PDF's
 
-
+BY Using PDF editor you will be able to:
+- convert an image to PDF
+- split a PDF file to its pages
+- merge 2 or more PDF files to one new file
+- detect words insdie a PDF file
+- extract tables from PDF files (beta)
 
 
 
@@ -14,5 +19,5 @@ Pillow
 tabula-py
 
 
-include 5 images inside the folder to be used by pygame (data/image..png)
-each image have to specify 
+!Data folder conteins images used by pygame inside main.py
+
