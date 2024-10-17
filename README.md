@@ -37,7 +37,7 @@ After finishing an operation you can close the window and have your PDF ready! I
 
 !Update: the program now restarts 3 seconds after performing an atcion
 
-Massive thanks to Jimvar
+Massive thanks to [Jimvar](https://github.com/Jimvar)
 
 ~eTecnos
 
