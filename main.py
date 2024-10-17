@@ -108,8 +108,8 @@ while again:
                 else:
                     call_text("Tables are extracted inside tables.txt(directory of the program)", 370)
             pygame.display.update()
-            # Wait 5 seconds and then restart the program
-            time.sleep(5)
+            # Wait 3 seconds and then restart the program
+            time.sleep(3)
             running = True
             start = True
             break
