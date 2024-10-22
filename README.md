@@ -60,23 +60,6 @@ The following window will open while running main.py:
 
 Each image corresponds to a certain function executed by the program. After finishing an operation you can close the window and have your PDF ready!
 
-## Contribution Guidelines
-
-Thank you for considering contributing to PDF Editor! Here are some guidelines to help you get started:
-
-### Getting Started
-
-1. Fork the repository.
-2. Clone your fork: `git clone https://github.com/your-username/pdfeditor.git`
-3. Create a branch for your feature or bug fix: `git checkout -b feature-name`
-4. Make your changes.
-5. Commit your changes: `git commit -am 'Add new feature'`
-6. Push to the branch: `git push origin feature-name`
-7. Create a pull request.
-
-### Testing
-
-Please ensure that your code passes all tests before submitting a pull request.
 
 ## License
 
