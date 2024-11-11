@@ -27,7 +27,7 @@ Ensure you have Python installed on your system. You can download it from [pytho
 
 2. Install the required Python libraries:
     ```sh
-    pip install PyPDF2 Pillow tabula-py pygame
+    pip install PyPDF2 Pillow tabula-py pygame tkinter string keyboard
     ```
 
 3. Run the main program:
@@ -60,6 +60,9 @@ The following window will open while running main.py:
 
 Each image corresponds to a certain function executed by the program. After finishing an operation you can close the window and have your PDF ready!
 
+## Update
+You can now go back after conducting an operation:
+![back](https://github.com/etecnos/pdfeditor/blob/main/output/monitor.png?raw=true)
 
 ## License
 
