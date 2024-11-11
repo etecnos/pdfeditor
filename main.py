@@ -9,6 +9,7 @@ from tables import tables
 # The Libraries we are going to use
 import pygame
 import sys
+import keyboard
 import time
 
 # Initialize Pygame
@@ -57,6 +58,10 @@ def call_text(tx, wdt):
     font = pygame.font.Font(None, 36)
     text = font.render(tx, True, (0, 0, 0))
     screen.blit(text, (SCREEN_WIDTH // 2 - wdt, 200))
+    # This text appears after an action is conducted
+    if not start:
+        text = font.render("Press q to go back to the beginning", True, (173, 216, 230))
+        screen.blit(text, (190, 500))
 
 
 # call_text_lines use is the same with the previous function, but it is used if only a specific action is completed(you can see it below)
@@ -64,6 +69,10 @@ def call_text_lines(tx):
     font = pygame.font.Font(None, 28)
     text = font.render(tx, True, (0, 0, 0))
     screen.blit(text, (SCREEN_WIDTH // 50, 250))
+    # This text appears after an action is conducted 
+    if not start:
+        text = font.render("Press q to go back to the beginning", True, (173, 216, 230))
+        screen.blit(text, (190, 500))
 
 
 # this function checks whether any of the given images is selected(image = action)
@@ -78,6 +87,7 @@ def check_image_click(pos):
 # Again loop is used for the program to restart after performing an action
 again = True
 while again:
+
 
     # Main game loop
     running = True
@@ -108,11 +118,12 @@ while again:
                 else:
                     call_text("Tables are extracted inside tables.txt(directory of the program)", 370)
             pygame.display.update()
-            # Wait 3 seconds and then restart the program
-            time.sleep(3)
-            running = True
-            start = True
-            break
+            # Check if q key is pressed and restart the program
+            if keyboard.is_pressed("q"):
+                running = True
+                start = True
+                break
+
 
         # Event handling
         for event in pygame.event.get():
@@ -122,6 +133,10 @@ while again:
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and start:  # Left click
                 mouse_pos = pygame.mouse.get_pos()
                 check_image_click(mouse_pos)
+
+
+
+
 
         # Case one(image 1)
         if clicked_image_index == 1:
@@ -295,7 +310,6 @@ while again:
         pygame.display.flip()
     # Clean up Pygame
 pygame.quit()
-
 
 
 
