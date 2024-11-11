@@ -62,6 +62,7 @@ Each image corresponds to a certain function executed by the program. After fini
 
 ## Update
 You can now go back after conducting an operation:
+
 ![back](https://github.com/etecnos/pdfeditor/blob/main/output/back.png?raw=true)
 
 ## License
