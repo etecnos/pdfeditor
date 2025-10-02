@@ -71,6 +71,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-Massive thanks to [Jimvar](https://github.com/Jimvar)
+Massive thanks to [Jimvar](https://github.com/Jimvar), [0xReLogic](https://github.com/0xReLogic)
 
 ~eTecnos
