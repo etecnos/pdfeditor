@@ -27,7 +27,7 @@ Ensure you have Python installed on your system. You can download it from [pytho
 
 2. Install the required Python libraries:
     ```sh
-    pip install PyPDF2 Pillow tabula-py pygame tkinter string keyboard
+    pip install -r requirements.txt
     ```
 
 3. Run the main program:
