@@ -1,5 +1,6 @@
 
 from PyPDF2 import PdfMerger
+import os
 import tkinter as tk
 from tkinter import filedialog
 
@@ -25,11 +26,22 @@ def merge(times):
 
 # execute function is used to merge the selected files together
 def execute(files_list):
-    merger = PdfMerger()
+    try:
+        merger = PdfMerger()
 
-    for file in files_list:
-        merger.append(file)
+        for file in files_list:
+            if file and os.path.exists(file):
+                merger.append(file)
+            else:
+                print(f"Warning: Skipping invalid or non-existent file - {file}")
 
-
-    merger.write("merged.pdf")
+        merger.write("merged.pdf")
+        merger.close()
+        print("PDF files merged successfully: merged.pdf")
+    except FileNotFoundError as e:
+        print(f"Error: File not found - {str(e)}")
+    except PermissionError:
+        print("Error: Permission denied when creating merged PDF")
+    except Exception as e:
+        print(f"Error merging PDF files: {str(e)}")
 

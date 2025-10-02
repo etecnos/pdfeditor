@@ -25,45 +25,55 @@ def give():
 
 # detect function is used to detect the word given
 def detect(path,word):
-    file = open(path, "rb")
-    reader = PdfReader(file)
-    b = 0
-    c = 0
-    times = 0
-    text = ""
-    lines = []
-    # Collect each page and its text
-    for i in range(len(reader.pages)):
-        page = reader.pages[i]
-        text = text + page.extract_text()
-
-    # Line splitter
-    text3 = text.splitlines()
-    # Remove Punctuation
-    for i in range(len(text3)):
-        for j in text3[i]:
-            if j in string.punctuation:
-                text3[i] = text3[i].replace(j, "")
-
-    for i in text3:
-        # text2 variable hold each line word the file
-        text2 = text3[c].split()
-        for j in text2:
-            if word == text2[b]:
-                times += 1
-                lines.append(str(c + 1))
-            b += 1
-        c += 1
+    try:
+        file = open(path, "rb")
+        reader = PdfReader(file)
         b = 0
+        c = 0
+        times = 0
+        text = ""
+        lines = []
+        # Collect each page and its text
+        for i in range(len(reader.pages)):
+            page = reader.pages[i]
+            text = text + page.extract_text()
 
-    # Create the txt file with the results
-    with open("lines.txt", 'w') as file:
-        file.write("It was detected in: \n")
-        for i in lines:
-            file.write(f"Line {i}\n")
+        # Line splitter
+        text3 = text.splitlines()
+        # Remove Punctuation
+        for i in range(len(text3)):
+            for j in text3[i]:
+                if j in string.punctuation:
+                    text3[i] = text3[i].replace(j, "")
 
+        for i in text3:
+            # text2 variable hold each line word the file
+            text2 = text3[c].split()
+            for j in text2:
+                if word == text2[b]:
+                    times += 1
+                    lines.append(str(c + 1))
+                b += 1
+            c += 1
+            b = 0
 
+        # Create the txt file with the results
+        with open("lines.txt", 'w') as file:
+            file.write("It was detected in: \n")
+            for i in lines:
+                file.write(f"Line {i}\n")
 
+        file.close()
+        print(f"Word detection completed. Found {times} occurrences")
+        return times
+    except FileNotFoundError:
+        print(f"Error: PDF file not found - {path}")
+        return 0
+    except PermissionError:
+        print(f"Error: Permission denied when accessing - {path}")
+        return 0
+    except Exception as e:
+        print(f"Error detecting words in PDF: {str(e)}")
+        return 0
 
-    return times
 
